@@ -3,7 +3,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Navbar, Nav, Container } from "react-bootstrap"
 import CartIcon from '../CartWidget/CartWidget'
-import './navBar.css'
+
 
 const NavBar = () => {
     return <>
