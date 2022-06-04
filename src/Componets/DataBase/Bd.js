@@ -1,8 +1,8 @@
-import ipapyhg from "./assets/ipapyhg.jpeg";
-import wipapyh from "./assets/wipapyh.jpeg";
-import diegobeer from "./assets/diegobeer.jpeg";
-import hempipa from "./assets/ipashirhopper.webp";
-import apaokc from "./assets/apaokc.jpeg";
+import ipapyhg from "../Assets/ipapyh.jpeg";
+import wipapyh from "../Assets/wipapyh.jpeg";
+import diegobeer from "../Assets/diegobeer.jpeg";
+import hempipa from "../Assets/hempsirhopper.png";
+import apaokc from "../Assets/apaokc.jpeg";
 
 
 const productos = [

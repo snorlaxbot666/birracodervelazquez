@@ -1,7 +1,7 @@
 import '../ItemListContainer/ItemListContainer.css';
 import { useEffect, useState } from 'react'
-import { getProducto } from '../bd'
-import ItemList from '../Componets/ItemList/ItemList.jsx'
+import { getProducto } from '../DataBase/Bd';
+import ItemList from '../ItemList/ItemList';
 
 const ItemListContainer = ({mensaje}) => {
 
