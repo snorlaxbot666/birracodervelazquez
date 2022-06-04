@@ -8,7 +8,7 @@ function App() {
 
     <>
       <NavBar/>
-      <ItemListContainer mensaje = "Catálogo de Productos"/>
+      <ItemListContainer mensaje = "Bienvenidos a BirraCoder"/>
     </>
     
   );

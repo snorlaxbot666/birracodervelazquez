@@ -5,7 +5,7 @@ import "./Item.css"
 
 const Item = ({ nombre, precio, img }) => {
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '16rem' }}>
             <Card.Img variant="top" src={img} alt={nombre} />
             <Card.Body>
                 <Card.Title>{nombre}</Card.Title>
