@@ -1,26 +1,52 @@
 
    
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Navbar, Nav, Container } from "react-bootstrap"
+import { Navbar, Nav, Container , NavDropdown, Form, FormControl, Button} from "react-bootstrap"
 import CartIcon from '../CartWidget/CartWidget'
 
 
 const NavBar = () => {
-    return <>
-        <div>
-            <Navbar bg="light" variant="light">
-                <Container>
-                    <CartIcon className="cart-widget__icon" />
-                    <Navbar.Brand href="#home">BirraCoder</Navbar.Brand>
-                    <Nav className="me-auto">
-                        <Nav.Link href="#home">Inicio</Nav.Link>
-                        <Nav.Link href="#features">Fermentando las promos</Nav.Link>
-                        <Nav.Link href="#pricing">Madurando</Nav.Link>
-                    </Nav>
-                </Container>
-            </Navbar>
-        </div>
-    </>
+    return (
+        <Navbar bg="dark" expand="lg" variant='dark'>
+  <Container fluid>
+  <CartIcon className="cart-widget__icon" />
+    <Navbar.Brand href="#">Artesanal Birra Store</Navbar.Brand>
+    <Navbar.Toggle aria-controls="navbarScroll" />
+    <Navbar.Collapse id="navbarScroll">
+      <Nav
+        className="me-auto my-2 my-lg-0"
+        style={{ maxHeight: '100px' }}
+        navbarScroll
+      >
+        <Nav.Link href="#action1">Inicio</Nav.Link>
+        <Nav.Link href="#action2">Catalogo</Nav.Link>
+        <NavDropdown title="Cervezas" id="navbarScrollingDropdown">
+          <NavDropdown.Item href="#action3">Fabricas</NavDropdown.Item>
+          <NavDropdown.Item href="#action4">Estilos</NavDropdown.Item>
+          <NavDropdown.Divider />
+          <NavDropdown.Item href="#action5">
+            Something else here
+          </NavDropdown.Item>
+        </NavDropdown>
+        <Nav.Link href="#" disabled>
+          Sobre Nosotros
+        </Nav.Link>
+      </Nav>
+      <Form className="d-flex">
+        <FormControl
+          type="search"
+          placeholder="Buscar"
+          className="me-2"
+          aria-label="Buscar"
+        />
+        <Button variant="outline-success">Buscar</Button>
+      </Form>
+    </Navbar.Collapse>
+  </Container>
+</Navbar>
+                    
+
+    )
 }
 
 export default NavBar
