@@ -9,7 +9,7 @@ const NavBar = () => {
     return (
         <Navbar bg="dark" expand="lg" variant='dark'>
   <Container fluid>
-  <CartIcon className="cart-widget__icon" />
+  
     <Navbar.Brand href="#">Artesanal Birra Store</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
@@ -31,6 +31,7 @@ const NavBar = () => {
         <Nav.Link href="#" disabled>
           Sobre Nosotros
         </Nav.Link>
+        <CartIcon className="cart-widget__icon" />
       </Nav>
       <Form className="d-flex">
         <FormControl

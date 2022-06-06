@@ -1,4 +1,4 @@
-
+import './CartWidget.css';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
