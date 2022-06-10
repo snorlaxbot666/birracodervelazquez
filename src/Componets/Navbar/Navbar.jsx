@@ -1,16 +1,15 @@
-
-   
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Navbar, Nav, Container , NavDropdown, Form, FormControl, Button} from "react-bootstrap"
 import CartIcon from '../CartWidget/CartWidget'
+
 
 
 const NavBar = () => {
     return (
         <Navbar bg="dark" expand="lg" variant='dark'>
   <Container fluid>
-  
-    <Navbar.Brand href="#">Artesanal Birra Store</Navbar.Brand>
+    
+    <Navbar.Brand href="/">Artesanal Birra Store</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -18,7 +17,7 @@ const NavBar = () => {
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link href="#action1">Inicio</Nav.Link>
+        <Nav.Link href="/">Inicio</Nav.Link>
         <Nav.Link href="#action2">Catalogo</Nav.Link>
         <NavDropdown title="Cervezas" id="navbarScrollingDropdown">
           <NavDropdown.Item href="#action3">Fabricas</NavDropdown.Item>

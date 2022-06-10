@@ -1,21 +1,29 @@
-import { Card } from "react-bootstrap"
-import Contador from "../Contador/Contador"
-import "./Item.css"
 
+import './Item.css'
+import { Link } from 'react-router-dom'
 
-const Item = ({ nombre, precio, img }) => {
+const Item = ({id, nombre, img, precio}) => {
     return (
-        <Card style={{ width: '16rem' }}>
-            <Card.Img variant="top" src={img} alt={nombre} />
-            <Card.Body>
-                <Card.Title>{nombre}</Card.Title>
-                <Card.Text>
+        <article className="CardItem">
+            <header className="Header">
+                <h2 className="ItemHeader">
+                    {nombre}
+                </h2>
+            </header>
+            <picture>
+                <img src={img} alt={nombre} className="ItemImg"/>
+            </picture>
+            <section>
+                <p className="Info">
                     Precio: ${precio}
-                </Card.Text>
-                <Contador inicio={0}></Contador>
-            </Card.Body>
-        </Card>
+                </p>
+            </section>           
+            <footer className='ItemFooter'>
+                <Link to={`/detail/${id}`} className='Option'>Ver detalle</Link>
+            </footer>
+        </article>
     )
 }
 
 export default Item
+
