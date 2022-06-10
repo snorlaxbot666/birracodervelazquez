@@ -6,11 +6,11 @@ import apaokc from "../Assets/apaokc.jpeg";
 
 
 const producto = [
-    {id: '1', nombre: 'Ipa Palo y Hueso', category: 'Ipa', precio: 380, img: ipapyhg},
-    {id: '2', nombre: 'Wipa Palo y Hueso', category: 'Ipa', precio: 500, img: wipapyh},
-    {id: '3', nombre: 'Diego Beer Tacuara', cateogry: 'Golden', precio: 500, img: diegobeer},
-    {id: '4', nombre: 'Hemp Ipa Sir Hopper', category: 'Ipa', precio: 300, img: hempipa},
-    {id: '5', nombre: 'Apa Carancho Okcidenta', category: 'Apa', precio: 600, img: apaokc}
+    {categoryId: 'ipa', id: '1', nombre: 'Ipa Palo y Hueso', category: 'Ipa', precio: 380, img: ipapyhg, descripcion: 'cerveza lupulada'},
+    {categoryId: 'wipa', id: '2', nombre: 'Wipa Palo y Hueso', category: 'Ipa', precio: 500, img: wipapyh, descripcion: 'cerveza west coast fuerte'},
+    {categoryId: 'especial', id: '3', nombre: 'Diego Beer Tacuara', cateogry: 'Golden', precio: 500, img: diegobeer, descripcion: 'edicion especial golden maradona'},
+    {categoryId: 'hemp', id: '4', nombre: 'Hemp Ipa Sir Hopper', category: 'Ipa', precio: 300, img: hempipa, descripcion: 'cerveza lupulada intensa de hernan castelani'},
+    {categoryId: 'apa', id: '5', nombre: 'Apa Carancho Okcidenta', category: 'Apa', precio: 600, img: apaokc, descripcion: 'cerveza citrica americana'},
     
 ]
 

@@ -1,17 +1,25 @@
 
-const ItemDetail = ({producto}) => {
+import "../ItemDetail/ItemDetail.css";
+import Contador from "../Contador/Contador"
+
+const ItemDetail = ({ nombre, precio, img, descripcion }) => {
+
+
     return (
-        <div className="col-12 col-lg-6">
-            <div className="card">
-                <img src={producto.img} className="card-img-top" alt="..."/>
-                <div className="card-body">
-                    <h5 className="card-title">{producto.nombre}</h5>
-                    <p className="card-text">{producto.descripcion}</p>
-                    <p className="card-text">Precio: {producto.precio}</p>
-                </div>
+        <div className="producto">
+            <div className="imagen">
+                <img style={{ maxWidth: "100%" }} src={img} alt="" />
+            </div>
+            <div className="producto-info">
+                <h3>{nombre}</h3>
+                <h3 className="precio">Precio ${precio}</h3>
+                <Contador inicio={0} tipoFlex="space-between" />
+            </div>
+            <div className="descripcion">
+                <h3>{descripcion}</h3>
             </div>
         </div>
     )
 }
 
-export default ItemDetail;
+export default ItemDetail

@@ -1,23 +1,38 @@
-import {useState, useEffect } from 'react';
-import { getProductoById} from '../DataBase/Bd';
-import ItemDetail from '../../Componets/ItemDetail/ItemDetail';
-import { useParams } from 'react-router-dom';
+
+import '../ItemDetailContainer/ItemDetailContainer.css';
+import ItemDetail from '../ItemDetail/ItemDetail'
+import { useEffect, useState } from 'react'
+import { getProducto } from '../../Componets/DataBase/Bd'
+import { useParams } from 'react-router-dom'
+import { Spinner } from 'react-bootstrap'
 
 const ItemDetailContainer = () => {
-    const [producto, setProducto] = useState(null);
-    const {id} = useParams();
+
+    const [producto, setProducto] = useState()
+    const { id } = useParams()
+    const [cargando, setCargando] = useState(true)
+
     useEffect(() => {
-        getProductoById(id)
-        .then(producto => {
-            setProducto(producto);
+        setCargando(true)
+        getProducto(1000).then(response => {
+            setProducto(response.find(res => res.id === id))
+        }).finally(() => {
+            setCargando(false)
         })
-    }, [id]);
+    }, [id])
+
+    if (cargando) {
+        return (
+            <Spinner style={{ position: "absolute", margin: "auto", left: "0", top: "0", bottom: "0", right: "0", width: "51px", height: "51px" }} animation="border" role="status"></Spinner>
+        )
+    }
+
+
     return (
-        <>
-       
-            {producto && <ItemDetail producto = {producto}/>}
-        </>
+        <section className='infoProducto'>
+            <ItemDetail {...producto} />
+        </section>
     )
 }
 
-export default ItemDetailContainer;
+export default ItemDetailContainer

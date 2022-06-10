@@ -20,12 +20,12 @@ const NavBar = () => {
         <Nav.Link href="/">Inicio</Nav.Link>
         <Nav.Link href="#action2">Catalogo</Nav.Link>
         <NavDropdown title="Cervezas" id="navbarScrollingDropdown">
-          <NavDropdown.Item href="#action3">Fabricas</NavDropdown.Item>
-          <NavDropdown.Item href="#action4">Estilos</NavDropdown.Item>
+          <NavDropdown.Item href="/categoryId/ipa">IPA</NavDropdown.Item>
+          <NavDropdown.Item href="/categoryId/wipa">WIPA</NavDropdown.Item>
+          <NavDropdown.Item href="/categoryId/especial">ESPECIAL</NavDropdown.Item>
+          <NavDropdown.Item href="/categoryId/hemp">HEMP</NavDropdown.Item>
+          <NavDropdown.Item href="/categoryId/apa">APA</NavDropdown.Item>
           <NavDropdown.Divider />
-          <NavDropdown.Item href="#action5">
-            Something else here
-          </NavDropdown.Item>
         </NavDropdown>
         <Nav.Link href="#" disabled>
           Sobre Nosotros
