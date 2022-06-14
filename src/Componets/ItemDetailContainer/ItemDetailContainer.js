@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         setCargando(true)
-        getProducto(1000).then(response => {
+        getProducto(500).then(response => {
             setProducto(response.find(res => res.id === id))
         }).finally(() => {
             setCargando(false)

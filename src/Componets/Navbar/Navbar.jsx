@@ -18,7 +18,7 @@ const NavBar = () => {
         navbarScroll
       >
         <Nav.Link href="/">Inicio</Nav.Link>
-        <Nav.Link href="#action2">Catalogo</Nav.Link>
+        <Nav.Link href="/categoryId">Catalogo</Nav.Link>
         <NavDropdown title="Cervezas" id="navbarScrollingDropdown">
           <NavDropdown.Item href="/categoryId/ipa">IPA</NavDropdown.Item>
           <NavDropdown.Item href="/categoryId/wipa">WIPA</NavDropdown.Item>
@@ -27,7 +27,7 @@ const NavBar = () => {
           <NavDropdown.Item href="/categoryId/apa">APA</NavDropdown.Item>
           <NavDropdown.Divider />
         </NavDropdown>
-        <Nav.Link href="#" disabled>
+        <Nav.Link href="/" Disable>
           Sobre Nosotros
         </Nav.Link>
         <CartIcon className="cart-widget__icon" />

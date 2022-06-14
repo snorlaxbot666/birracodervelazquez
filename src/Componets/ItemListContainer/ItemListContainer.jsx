@@ -17,7 +17,7 @@ const ItemListContainer = ({ mensaje }) => {
             if (categoryId === undefined)
                 setProductos(response)
             else {
-                setProductos(response.filter(prod => prod.idCategoria === categoryId))
+                setProductos(response.filter(prod => prod.categoryId === categoryId))
             }
         }).finally(() => {
             setCargando(false)
